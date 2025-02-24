@@ -5,7 +5,9 @@ import { useEffect } from 'react';
 export default function Home() {
     // Move the alert outside JSX using useEffect
     useEffect(() => {
-        alert("Thank you for visiting xoxo");
+        setTimeout(() => {
+            alert("Thank you for visiting xoxo");
+        }, 500);
     }, []);
 
     return (
@@ -16,7 +18,13 @@ export default function Home() {
             </Head>
 
             <div className="container">
-                <Image src="/your-photo.jpeg" alt="Elizabeth Mordi" width={150} height={150} className="profile-pic" />
+                <Image 
+                    src="/your-photo.jpeg" 
+                    alt="Portrait of Elizabeth Mordi smiling" 
+                    width={150} 
+                    height={150} 
+                    className="profile-pic" 
+                />
                 <h1>Elizabeth Mordi</h1>
                 <p>Student at Ogwashi Ukwu Polytechnic | Leader | Fashion Enthusiast</p>
 
@@ -32,7 +40,7 @@ export default function Home() {
 
                 <div className="blog-post">
                     <h2>Fashion & First Impressions</h2>
-                    <p>"One is addressed how they are dressed." I live by this principle because appearance plays a key role in confidence and how we are perceived...</p>
+                    <p>&ldquo;One is addressed how they are dressed.&rdquo; I live by this principle because appearance plays a key role in confidence and how we are perceived...</p>
                 </div>
             </div>
 
